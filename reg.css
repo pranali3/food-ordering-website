@@ -1,0 +1,17 @@
+
+body {
+ 
+  background-image:url("regimage4.jpg");
+  background-repeat:repeat;
+ }
+ .btn-primary {
+  color: white;
+  background-image:none;
+  background-color: salmon;
+  border-color: salmon;
+}
+.btn-primary:hover {
+  color: white;
+  background-color: palevioletred;
+  border-color: palevioletred;
+}

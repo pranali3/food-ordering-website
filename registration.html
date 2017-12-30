@@ -1,0 +1,122 @@
+<html><head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script language="javascript" type="text/javascript" src="reg.js"></script>
+<link rel="stylesheet" type="text/css" href="reg.css">
+
+
+ <script>
+function checkPass()
+{
+var password = document.getElementById('password');
+var password_confirmation = document.getElementById('password_confirmation');
+var user_name = document.getElementById('user_name');
+var email =document.getElementById('email');
+var phone_no =document.getElementById('phone_no');
+var res_address= document.getElementById('res_address');
+var first_name= document.getElementById('first_name');
+var last_name= document.getElementById('last_name');
+			if(first_name.value=="" || first_name.value == null)
+            {
+                        alert("Enter your first name");
+                        return false;
+            }
+			else if(last_name.value=="" || last_name.value == null)
+            {
+                        alert("Enter your last name");
+                        return false;
+            }
+            else if(user_name.value=="" || user_name.value == null)
+            {
+                        alert("Enter username");
+                        return false;
+            }
+			else if(password.value != password_confirmation.value){
+				alert("Passwords Do Not Match!");
+				return false;
+			}
+			else if(email.value=="" || email.value == null)
+            {
+                        alert("Enter email adress");
+                        return false;
+            }
+			else if(res_address.value=="" || res_address.value == null)
+            {
+                        alert("Enter the address where you want your order to be delivered");
+                        return false;
+            }
+			else if(phone_no.value=="" || phone_no.value == null)
+            {
+                        alert("Enter your mobile number");
+                        return false;
+            }
+			else{ return true;}
+    }</script>
+	
+</head>
+<body>
+
+<div class="container">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+		<form role="form" action="abc.php">
+			<h2>Please Sign Up <small>It's free and always will be.</small></h2>
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+                        <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<input type="text" name="user_name" id="user_name" class="form-control input-lg" placeholder="User Name" tabindex="3">
+			</div>
+			
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+			</div>
+			<div class="form-group">
+				<textarea name="res_address" rows="4" id="res_address" class="form-control input-lg" placeholder="Residential Address" tabindex="6"></textarea>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+			<div class="form-group">
+				<input type="number" name="phone_no" input id="phone_no" class="form-control input-lg" placeholder="Phone Number" tabindex="7">
+			</div>
+			</div>
+			</div>
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-md-12"><input type="submit" onClick="return checkPass();" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="8"></div>
+				<!--<div class="col-xs-12 col-md-6"><a href="singin.html" class="btn btn-success btn-block btn-lg">Sign In</a></div>-->
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>
